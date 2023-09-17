@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #293850;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+}
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.5;
+}
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+/*ーーーーーー↑ リセットCSS ↑ーーーーーー*/
+
+.header_wrap {
+  background-color: #f7f3f1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+.header_logo {
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 135px;
+  position: fixed;
+}
+.pc_nav ul {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-left: 40%;
+}
+.pc_nav ul li {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  text-align: center;
+}
+.pc_nav ul li img {
+  width: 50px;
+  margin-right: 50px;
+}
+
+footer {
+  background-color: #a6b8c2;
+  text-align: center;
+  padding-top: 40px;
+}
+footer p {
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.contact_botton {
+  font-weight: bold;
+}
+.contact_botton p {
+  font-size: 20px;
+  line-height: 2;
+  border: solid 2px #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.airplane_pic {
+  width: 36px;
+  margin-right: 10px;
+}
+.instaglam_icon {
+  width: 30px;
+  margin-top: 50px;
+}
+.copyright {
+  font-size: 10px;
+}
+.top_arrow {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  width: 32px;
+}

@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #293850;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+}
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.5;
+}
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+/*ーーーーーー↑ リセットCSS ↑ーーーーーー*/
+
+.contact_form {
+  margin: 80px auto 50px 10%;
+}
+h1 {
+  text-align: center;
+}
+.contact_form img {
+  width: 34%;
+}
+p {
+  text-align: center;
+  margin-left: 10%;
+  margin-bottom: 50px;
+  padding-right: 30px;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  line-height: 1.75;
+}
+
+#select,
+.c-form,
+.form-item {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.form-item,
+.c-form__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+#select,
+.c-form__label,
+.c-form__input {
+  padding: 10px;
+}
+.option__input,
+.c-form__label {
+  width: 90%;
+}
+#select,
+.c-form__input {
+  font-size: 16px;
+  background-color: #f7f3f1;
+  border-radius: 4px;
+  border: none;
+}
+#select:focus-visible,
+.c-form__input:focus-visible {
+  outline: #fff auto 1px;
+}
+.c-form__required {
+  color: #fff;
+  font-size: small;
+  background-color: #a6b8c2;
+  border-radius: 4px;
+  padding: 5px 5px;
+  margin: 0 0 0 18px;
+}
+textarea.c-form__input {
+  height: 250px;
+  background-color: #f7f3f1;
+  border: none;
+}
+.c-form__submit {
+  text-align: end;
+  margin-bottom: 100px;
+  padding-top: 20px;
+}
+.c-form__submit button {
+  font-size: 17px;
+  color: #fff;
+  background-color: #c7d7dd;
+  background-color: #c7d7dd;
+  border: solid 1px;
+  border-radius: 4px;
+  padding: 5px 60px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.c-form__submit button:hover {
+  color: #a6b8c2;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .c-form__item {
+    flex-wrap: nowrap;
+  }
+  .c-form__label {
+    width: 40%;
+  }
+  .c-form__input {
+    width: 55%;
+  }
+}

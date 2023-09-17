@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #293850;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+}
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.5;
+}
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+/*ーーーーーー↑ リセットCSS ↑ーーーーーー*/
+.header_wrap {
+  background-color: #f7f3f1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+.header_logo {
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 135px;
+  position: fixed;
+}
+.pc_nav ul {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-left: 40%;
+}
+.pc_nav ul li {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  text-align: center;
+}
+.pc_nav ul li img {
+  width: 50px;
+  margin-right: 50px;
+}
+
+h5 {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 1.3em;
+  letter-spacing: 2em;
+  background-color: yellowgreen;
+}
+.index {
+  margin-right: 100px;
+}
+.contents_page {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+
+  background-color: skyblue;
+}
+.contents_detail li {
+  font-size: 1em;
+  line-height: 6;
+  background-color: yellow;
+}
+.contents_detail {
+  margin-left: 10vw;
+}
+.index {
+  float: right; /* 回り込み指定 */
+}
+.index_circle {
+  display: flex;
+  font-size: 1rem;
+  text-align: center;
+  color: #293850;
+  margin-left: 26%;
+  margin-right: 37%;
+  gap: 8%;
+}
+.circle_1 {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #efdad3;
+  text-align: center;
+  line-height: 70px;
+}
+.circle_2 {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #efdad3;
+}
+.circle span {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 70px;
+  text-align: center;
+}
+
+.facing_page img {
+  margin-left: 11%;
+  width: 89%;
+}
+
+/*ーーーーーーーーーーーーーーーーーーーーーーー*/
+h2 img {
+  width: 45%;
+}
+.catch_copy {
+  text-align: center;
+  margin-top: 124px;
+  margin-bottom: 50px;
+}
+main p {
+  font-size: 16px;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+#service {
+  margin-right: 7.5%;
+  margin-left: 7.5%;
+}
+#service h3 img {
+  margin-top: 150px;
+  margin-bottom: 80px;
+  margin-left: 35%;
+  text-align: center;
+  width: 30%;
+}
+.direction,
+.design,
+.cording,
+.translation {
+  display: flex;
+  margin-right: 30px;
+}
+.pictogram {
+  max-width: 25%;
+  padding-top: 60px;
+}
+.details {
+  padding-left: 30px;
+  margin-right: 30px;
+  max-width: 75%;
+}
+#service h4 {
+  font-size: 24px;
+  margin-top: 60px;
+  padding-bottom: 28px;
+  margin-bottom: 0;
+}
+#service p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+#works {
+  max-width: 1000px;
+  margin-right: 7.5%;
+  margin-left: 7.5%;
+  background-color: orange;
+}
+#works h3 img {
+  margin-top: 130px;
+  margin-bottom: 80px;
+  margin-left: 36%;
+  text-align: center;
+  width: 28%;
+}
+footer {
+  background-color: #a6b8c2;
+  text-align: center;
+  padding-top: 40px;
+}
+footer p {
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.contact_botton {
+  font-weight: bold;
+}
+.contact_botton p {
+  font-size: 20px;
+  line-height: 2;
+  border: solid 2px #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.airplane_pic {
+  width: 36px;
+  margin-right: 10px;
+}
+.instaglam_icon {
+  width: 30px;
+  margin-top: 50px;
+}
+.copyright {
+  font-size: 10px;
+}
+.top_arrow {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  width: 32px;
+}
