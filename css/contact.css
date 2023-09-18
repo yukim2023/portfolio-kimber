@@ -50,7 +50,7 @@ h1 {
   text-align: center;
 }
 .contact_form img {
-  width: 34%;
+  width: 66%;
 }
 p {
   text-align: center;
@@ -61,7 +61,6 @@ p {
   letter-spacing: 0.02em;
   line-height: 1.75;
 }
-
 #select,
 .c-form,
 .form-item {
@@ -70,15 +69,19 @@ p {
 }
 .form-item,
 .c-form__item {
+  line-height: normal;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 20px;
 }
-#select,
 .c-form__label,
 .c-form__input {
   padding: 10px;
+}
+#select {
+  width: 55%;
+  margin: 0;
 }
 .option__input,
 .c-form__label {
@@ -86,6 +89,7 @@ p {
 }
 #select,
 .c-form__input {
+  box-sizing: border-box;
   font-size: 16px;
   background-color: #f7f3f1;
   border-radius: 4px;
@@ -105,6 +109,14 @@ p {
 }
 textarea.c-form__input {
   height: 250px;
+  background-color: #f7f3f1;
+  border: none;
+}
+#no_robot .c-form__required {
+  margin-left: 0;
+}
+#no_robot {
+  height: 30px;
   background-color: #f7f3f1;
   border: none;
 }

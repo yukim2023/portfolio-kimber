@@ -16,52 +16,71 @@
 </header>
 
 <body>
-    <div class="contact_form">
-        <h1><img src="../images/contact@2x.png" alt="お問い合わせフォーム"></h1>
-    </div>
-    <p>お問い合わせ、デザイン等に関するご相談やご依頼は、下記のフォームからご連絡ください。<br>
-        ３営業日以内にご返信させていただきます。</p>
+    <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfYQ69VC9KQWIWx4CfFG2zAOIAih8uQI4Muzop4bDEZXgVxQw/formResponse"
+        method="post" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
 
-    <div class="form-item">
-        <label class="c-form__label" for="field-item">お問い合わせ項目<span class="c-form__required">必須</span></label>
-        <select id="select" name="entry.1942460773">
-            <option class="option__input" value="バナー作成">バナー作成</option>
-            <option class="option__input" value="LP作成">LP作成</option>
-            <option class="option__input" value="WEBページ作成">WEBページ作成</option>
-            <option class="option__input" value="デザインのご相談">デザインのご相談</option>
-            <option class="option__input" value="その他">その他</option>
-        </select>
-    </div>
+        <div class="questionneirSection">
+            <div class="contact_form">
+                <h1><img src="../images/contact@2x.png" alt="お問い合わせフォーム"></h1>
+            </div>
+            <p>お問い合わせ、デザイン等に関するご相談やご依頼は、下記のフォームからご連絡ください。<br>
+                ３営業日以内にご返信させていただきます。</p>
+        </div>
 
-    <form class="c-form">
-        <div class="c-form__item">
-            <label class="c-form__label" for="field-name">企業名</label>
-            <input name="entry.813792682" class="c-form__input" id="field_company" placeholder="" type="text"
-                required="required" />
-        </div>
-        <div class="c-form__item">
-            <label class="c-form__label" for="field-name">お名前<span class="c-form__required">必須</span></label>
-            <input name="entry.1816851718" class="c-form__input" id="field_name" placeholder="" type="text"
-                required="required" />
-        </div>
-        <div class="c-form__item">
-            <label class="c-form__label" for="field-mail">メールアドレス<span class="c-form__required">必須</span></label>
-            <input name="entry.42474639" class="c-form__input" id="field_mail" placeholder="sample@gmail.com"
-                type="email" required="required" />
-        </div>
-        <div class="c-form__item">
-            <label class="c-form__label" for="field-name">件名</label>
-            <input name="entry.1969526206" class="c-form__input" id="field_title" placeholder="" type="text"
-                required="required" />
-        </div>
-        <div class="c-form__item">
-            <label class="c-form__label" for="field-message">内容<span class="c-form__required">必須</span></label>
-            <textarea name="entry.592603030" class="c-form__input" id="field_message" placeholder=""></textarea>
-        </div>
-        <div class="c-form__submit">
-            <button type="submit">送信する</button>
+        <div class="c-form">
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-item">お問い合わせ項目<span class="c-form__required">必須</span></label>
+                <select id="select" name="entry.368708745">
+                    <option class="option__input" value="バナー作成">バナー作成</option>
+                    <option class="option__input" value="LP作成">LP作成</option>
+                    <option class="option__input" value="WEBページ作成">WEBページ作成</option>
+                    <option class="option__input" value="デザインのご相談">デザインのご相談</option>
+                    <option class="option__input" value="その他">その他</option>
+                </select>
+            </div>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-company">会社名</label>
+                <input name="entry.1154542603" class="c-form__input" id="field_company" placeholder="" type="text"
+                    required="required" />
+            </div>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-name">お名前<span class="c-form__required">必須</span></label>
+                <input name="entry.1438891546" class="c-form__input" id="field_name" placeholder="" type="text"
+                    required="required" />
+            </div>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-mail">メールアドレス<span class="c-form__required">必須</span></label>
+                <input name="entry.1116419407" class="c-form__input" id="field_mail" placeholder="sample@gmail.com"
+                    type="email" required="required" />
+            </div>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-title">件名</label>
+                <input name="entry.2056611244" class="c-form__input" id="field_title" placeholder="" type="text"
+                    required="required" />
+            </div>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-message">内容<span class="c-form__required">必須</span></label>
+                <textarea name="entry.216942296" class="c-form__input" id="field_message" placeholder=""></textarea>
+            </div>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-robot">ロボットではありませんか？<span
+                        class="c-form__required">必須</span><br>回答欄に表示されている言葉をそのまま入力してください。</label>
+                <input name="entry.322127923" class="c-form__input" id="no_robot" placeholder="タスマニアデビル" type="text"
+                    required="required" pattern="タスマニアデビル" />
+            </div>
+            <div class="c-form__submit">
+                <button type="submit">送信する</button>
+            </div>
         </div>
     </form>
+
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='thanks.html';}"></iframe>
+
 </body>
 
 </html>
