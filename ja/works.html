@@ -6,37 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yuki Kimberのポートフォリオ、過去の制作物をご紹介">
     <title>WORKS｜制作したもの - ポートフォリオ Yuki Kimber</title>
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/works.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
 </head>
 
 <body>
+    <div id="cursor" class="cursor"></div>
+    <a href="#" class="btn"></a>
+
+    <header>
+        <div class="header_wrap">
+            <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="../ja/index.html#service">Service</a></li>
+                    <li><a href="../ja/works.html">Works</a></li>
+                    <li><a href="../ja/about.html">About me</a></li>
+                    <li><a href="../ja/contact.html">Contact</a></li>
+                    <li><a href=""><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div id="works">
         <div class="my_works">
-            <h1><img src="../images/my_works@2x.png" alt="制作物"></h1>
+            <h2><img src="../images/my_works@2x.png" alt="制作物"></h2>
         </div>
-        <h3>Category</h3>
-        <ul>
-            <li><a href="#bunner">バナー</a></li>
-            <li><a href="#lp_design">LP</a></li>
-            <li><a href="#web_page">Webページ</a></li>
-            <li><a href="#traslation">翻訳</a></li>
-            <li><a href="other">その他</a></li>
-        </ul>
+        <div id="category">
+            <h3>Category</h3>
+            <ul class="keywords">
+                <li><a href="#bunner">バナー</a></li>
+                <li><a href="#lp_design">LP</a></li>
+                <li><a href="#web_page">Webページ</a></li>
+                <li><a href="#traslation">翻訳</a></li>
+                <li><a href="other">その他</a></li>
+            </ul>
+        </div>
         <div id="bunner">
-            <h2>バナー広告</h2>
-            <img src="../images/kadai03_premium@2x-100.jpg" alt="ハンバーガーのバナー広告">
+            <h4>バナー広告</h4>
+            <div class="more"><a href="" class="arrow">More</a></div>
+            <div slider_photos>
+                <ul class="slider">
+                    <li class="premium_burger"><img src="../images/kadai03middle.webp" alt="ハンバーガーのバナー広告1"></li>
+                    <li><img src="../images/kadai03_pop.webp" alt="ハンバーガーのバナー広告2"></li>
+                    <li><img src="../images/kadai02.webp" alt="旅行予約アプリのバナー広告"></li>
+                    <li><img src="../images/kadai_other.webp" alt="ウェブデザインオンライン講座のバナー広告"></li>
+                    <li><img class="mobile" src="../images/kadai01.webp" alt="携帯電話学割プランのバナー広告"></li>
+                </ul>
+            </div>
         </div>
         <div id="lp_design">
-            <h2>LP ランディングページ</h2>
-            <img src="../images/kadai05@2x-100.jpg" alt="美容室のランディングページ">
+            <h4>LP ランディングページ</h4>
+            <div class="more"><a href="" class="arrow">More</a></div>
+            <ul class="slider">
+                <li><img class="hairsalon" src="../images/kadai05@2x-100.jpg" alt="美容室のランディングページ"></li>
+            </ul>
         </div>
         <div id="web_page">
-            <h2>Webページ</h2>
-            <img src="../images/kadai_cording@2x-100.jpg" alt="カフェのウェブページ">
+            <h4>Webページ</h4>
+            <div class="more"><a href="" class="arrow">More</a></div>
+            <ul class="slider">
+                <li><img src="../images/kadai_cording@2x-100.jpg" alt="カフェのウェブページ"></li>
+                <li><img src="../images/kadai04@2x-100.jpg" alt="レンタルワークスペースのウェブページ"></li>
+            </ul>
         </div>
-
-
     </div>
+
+    <footer>
+        <p>お気軽にお問い合わせ・ご相談ください。</p>
+        <div class="contact_botton">
+            <img src="../images/airplane@2x.png" alt="送信ボタン">
+            <p>Contact</p>
+        </div>
+        <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="インスタグラムアイコン">
+        <p class="copyright">&copy;Yuki Kimber Portfolio</p>
+        <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="トップに戻るボタン"></a></div>
+    </footer>
+
+    <script>
+        var cursor = document.getElementById('cursor');
+        // カーソル用のdivタグをマウスに追従させる
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        });
+        // リンクにホバーした時にクラス追加、離れたらクラス削除
+        var link = document.querySelectorAll('a');
+        for (var i = 0; i < link.length; i++) {
+            link[i].addEventListener('mouseover', function (e) {
+                cursor.classList.add('cursor--hover');
+            });
+            link[i].addEventListener('mouseout', function (e) {
+                cursor.classList.remove('cursor--hover');
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.slider').slick({
+            autoplay: true,
+            dots: true,
+            fade: true,
+        });
+    </script>
+
 </body>
 
 </html>

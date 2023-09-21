@@ -6,30 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ポートフォリオ Yuki Kimberのトップページです">
     <title>ポートフォリオ Yuki Kimber</title>
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
+    <div id="cursor" class="cursor"></div>
+    <a href="#" class="btn"></a>
+
     <header>
         <div class="header_wrap">
-            <h1 class="header_logo"><img src="../images/logo@2x.png" alt="ロゴ"></h1>
+            <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
             <nav class="pc_nav">
                 <ul>
                     <li><a href="#service">Service</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#about_me">About me</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><img src="../images/globe.jpg" alt="English"></li>
+                    <li><a href="../ja/works.html">Works</a></li>
+                    <li><a href="../ja/about.html">About me</a></li>
+                    <li><a href="../ja/contact.html">Contact</a></li>
+                    <li><a href=""><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
                 </ul>
             </nav>
         </div>
-        <picture>
-            <img src="../images/top_main@2x-100.jpg" alt="Web designer Yuki Kimber">
-        </picture>
-
     </header>
 
     <main>
+        <picture>
+            <img src="../images/top_main.webp" alt="Web designer Yuki Kimber">
+        </picture>
         <div class="catch_copy">
             <h2><img src="../images/top_subject_bold@2x.png" alt="伝えたいことはなんですか？"></h2>
         </div>
@@ -41,18 +44,22 @@
             異なる画面サイズに合わせサイズを調整する見やすいページ作りに対応します。</p>
     </main>
     <section id="table_of_contents">
-        <div class="index">
-            <h5>もくじ</h5>
-        </div>
-        <div class="contents_page">
-            <ul class="contents_detail">
-                <li>サービス内容</li>
-                <li>過去の作品</li>
-                <li>スキル</li>
-                <li>得意分野</li>
-                <li>私について</li>
-                <li>お問い合わせ・お仕事依頼のご相談</li>
-            </ul>
+        <div class="facing_page"><img src="../images/book.jpg" alt="もくじ"></div>
+
+        <div class="contents_innner">
+            <div class="index">
+                <h5>もくじ</h5>
+            </div>
+            <div class="contents_page">
+                <ul class="contents_detail">
+                    <li>サービス内容</li>
+                    <li>過去の作品</li>
+                    <li>スキル</li>
+                    <li>得意分野</li>
+                    <li>私について</li>
+                    <li>お問い合わせ・お仕事依頼のご相談</li>
+                </ul>
+            </div>
         </div>
 
         <ul class="index_circle">
@@ -63,7 +70,6 @@
             <li><a class="circle_2" href="#about_me"><span>About<br>me</span></a></li>
             <li><a class="circle_1" href="#contact">Contact</a></li>
         </ul>
-        <div class="facing_page"><img src="../images/book.jpg" alt="もくじ"></div>
     </section>
 
     <section id="service">
@@ -124,6 +130,24 @@
         <p class="copyright">&copy;Yuki Kimber Portfolio</p>
         <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="トップに戻るボタン"></a></div>
     </footer>
+
+    <script>
+        var cursor = document.getElementById('cursor');
+        // カーソル用のdivタグをマウスに追従させる
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        });
+        // リンクにホバーした時にクラス追加、離れたらクラス削除
+        var link = document.querySelectorAll('a');
+        for (var i = 0; i < link.length; i++) {
+            link[i].addEventListener('mouseover', function (e) {
+                cursor.classList.add('cursor--hover');
+            });
+            link[i].addEventListener('mouseout', function (e) {
+                cursor.classList.remove('cursor--hover');
+            });
+        }
+    </script>
 </body>
 
 </html>
