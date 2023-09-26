@@ -8,6 +8,7 @@
     <title>THANKS PAGE｜お問い合わせフォーム送信完了- ポートフォリオ Yuki Kimber</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/thanks.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -19,56 +20,81 @@
             <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="../ja/index.html#service">Service</a></li>
+                    <li><a href="./index.html#service">Service</a></li>
                     <li><a href="../ja/works.html">Works</a></li>
                     <li><a href="../ja/about.html">About me</a></li>
                     <li><a href="../ja/contact.html">Contact</a></li>
                     <li><a href=""><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
                 </ul>
             </nav>
+
+            <div class="sp_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="./index.html#service">Service</a></li>
+                    <li><a href="../ja/works.html">Works</a></li>
+                    <li><a href="../ja/about.html">About me</a></li>
+                    <li><a href="../ja/contact.html">Contact</a></li>
+                    <li><a href=""><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
+                    <li><a href=""></a>English</li>
+                </ul>
+            </nav>
+
         </div>
     </header>
 
-    <picture>
-        <img src="../images/thanks_page_pc.webp" alt="本を読む女の子">
-    </picture>
-    <div class="thanks_page">
+    <div class="main_visual">
+        <picture>
+            <source media="(max-width: 767px)" srcset="../images/thanks_page_sp.jpg">
+            <img src="../images/thanks_page_pc.webp" alt="本を読む女の子">
+        </picture>
+    </div>
+
+    <main>
         <h2>お問い合わせありがとうございます。</h2>
         <p>お送りいただいた内容を確認の上、３営業日以内に折り返しご連絡させていただきます。<br>
             ご入力いただいたメールアドレスへ自動返信の確認メールをお送りしておりますが、<br>
             しばらく経ってもメールが届かない場合は迷惑メールフォルダに振り分けられている可能性がございます。<br>
             ドメイン指定をされている場合は、@google.comからのメールが受信できるよう設定をお願い致します。<br>
         </p>
-        <img src="../images/thanks_pic.jpg" alt="thank you!">
+    </main>
+
+    <div class="thanks_pic">
+        <picture>
+            <source media="(max-width: 767px)" srcset="../images/thanks_pic_sp.jpg">
+            <img src="../images/thanks_pic.jpg" alt="喜ぶ女の子イラスト">
+        </picture>
     </div>
 
     <footer>
         <p>お気軽にお問い合わせ・ご相談ください。</p>
-        <div class="contact_botton">
-            <p><img class="airplane_pic" src="../images/airplane@2x.png" alt="送信ボタン">Contact</p>
+        <div class="contact_button">
+            <img src="../images/airplane@2x.png" alt="送信ボタン">
+            <p>Contact</p>
         </div>
         <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="インスタグラムアイコン">
-
         <p class="copyright">&copy;Yuki Kimber Portfolio</p>
         <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="トップに戻るボタン"></a></div>
     </footer>
 
+    <script src="../js/script.js"></script>
+
     <script>
-        var cursor = document.getElementById('cursor');
-        // カーソル用のdivタグをマウスに追従させる
-        document.addEventListener('mousemove', function (e) {
-            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        $(function () {
+            $('.sp_btn').click(function () {
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) {
+                    $('.sp_nav').addClass('active');
+                } else {
+                    $('.sp_nav').removeClass('active');
+                }
+            });
         });
-        // リンクにホバーした時にクラス追加、離れたらクラス削除
-        var link = document.querySelectorAll('a');
-        for (var i = 0; i < link.length; i++) {
-            link[i].addEventListener('mouseover', function (e) {
-                cursor.classList.add('cursor--hover');
-            });
-            link[i].addEventListener('mouseout', function (e) {
-                cursor.classList.remove('cursor--hover');
-            });
-        }
     </script>
 </body>
 

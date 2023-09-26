@@ -1,24 +1,48 @@
 @charset "utf-8";
 
-.thanks_page {
-  text-align: center;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+main {
   text-align: center;
   letter-spacing: 0.02em;
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.8em;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-weight: lighter;
   margin-top: 130px;
   margin-bottom: 50px;
 }
-p {
+main p {
   font-size: 1em;
   line-height: 3;
   margin-bottom: 100px;
 }
-.thanks_page img {
-  width: 19%;
-  margin-bottom: 100px;
+.thanks_pic {
+  display: block;
+  width: 30%;
+  margin: 100px auto;
+}
+/* レスポンシブ */
+@media screen and (max-width: 767px) {
+  .thanks_pic {
+    width: 100%;
+    margin: 0;
+  }
+  .thanks_pic img {
+    vertical-align: bottom;
+  }
+  h2,
+  main p {
+    text-align: left;
+    line-height: 1.8;
+  }
+  h2 {
+    margin: 56px 60px 30px 30px;
+    background-color: yellow;
+  }
+  main p {
+    margin: 0 60px 100px 30px;
+  }
 }

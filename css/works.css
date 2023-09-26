@@ -10,11 +10,9 @@ h2 {
   margin-top: 160px;
   margin-bottom: 80px;
 }
-h2 img {
+.my_works h2 img {
   margin-bottom: 0;
-}
-.my_works img {
-  width: 32%;
+  width: 40%;
 }
 h3 {
   font-size: 18px;
@@ -67,14 +65,14 @@ h4 {
 }
 .arrow:hover::after {
   right: 110px;
-  width: 100px;
 }
-.more {
+.modal-open {
   text-align: right;
 }
+
 /*ーーーーーーmoreボタン↑ーーーーーー*/
 .slider img,
-.more {
+.modal-open {
   width: 80%;
   margin: 0 auto;
 }
@@ -145,4 +143,112 @@ h4 {
   border-radius: 4px;
   width: 18px;
   height: 18px;
+}
+/*ーーーーーーーーーーーーーーーー*/
+/*モーダルを開くボタン 削除してmoreボタンに置き換える*/
+.modal-open {
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  background: #000;
+}
+/*ーーーーーー ↓ モーダルウィンドウ ↓ ーーーーーー*/
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-out;
+  z-index: 9;
+}
+.modal-body {
+  margin-top: 80px;
+}
+.summary {
+  margin-top: 50px;
+}
+.modal-content {
+  background: #fff;
+  text-align: left;
+  padding: 30px;
+}
+.modal-txt li {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 1.8;
+  text-indent: -16px;
+  margin: 0 auto 20px 20px;
+}
+.side_by_side {
+  display: flex;
+  max-width: 100%;
+  gap: 10px;
+  margin-top: 50px;
+}
+.for_sp {
+  width: 20%;
+}
+.for_pc {
+  max-width: 100%;
+  width: auto;
+}
+.modal-container::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-body {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 700px;
+  width: 90%;
+}
+.modal-close {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #a6b8c2;
+  padding: 4px 15px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  transition: opacity 0.6s;
+}
+.modal-close:hover {
+  opacity: 0.6;
+}
+.no_scroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  #works {
+    max-width: 100%;
+    margin: 0 30px;
+  }
+  #works h2 {
+    text-align: center;
+    margin: 150px auto 50px;
+  }
+  #works h2 img {
+    width: 72%;
+  }
+  .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }

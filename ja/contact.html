@@ -8,6 +8,7 @@
     <title>CONTACT｜お問い合わせフォーム - ポートフォリオ Yuki Kimber</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -19,19 +20,37 @@
             <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="../ja/index.html#service">Service</a></li>
+                    <li><a href="./index.html#service">Service</a></li>
                     <li><a href="../ja/works.html">Works</a></li>
                     <li><a href="../ja/about.html">About me</a></li>
                     <li><a href="../ja/contact.html">Contact</a></li>
                     <li><a href=""><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="./index.html#service">Service</a></li>
+                    <li><a href="../ja/works.html">Works</a></li>
+                    <li><a href="../ja/about.html">About me</a></li>
+                    <li><a href="../ja/contact.html">Contact</a></li>
+                    <li><a href=""><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
+                    <li><a href=""></a>English</li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <picture>
-        <img src="../images/contact.webp" alt="ラップトップPC">
-    </picture>
+    <div class="main_visual">
+        <picture>
+            <source media="(max-width: 767px)" srcset="../images/contact_sp.jpg">
+            <img src="../images/contact.webp" alt="ラップトップPC">
+        </picture>
+    </div>
 
     <form
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfYQ69VC9KQWIWx4CfFG2zAOIAih8uQI4Muzop4bDEZXgVxQw/formResponse"
@@ -39,14 +58,16 @@
         <div class="contact_form">
             <h2><img src="../images/contact@2x.png" alt="お問い合わせフォーム"></h2>
         </div>
-        <p class="info">お問い合わせ、デザイン等に関するご相談やご依頼は、下記のフォームにてご連絡ください。<br>
-            ３営業日以内にご返信させていただきます。</p>
+        <main>
+            <p class="info">お問い合わせ、デザイン等に関するご相談やご依頼は、下記のフォームにてご連絡ください。<br>
+                ３営業日以内にご返信させていただきます。</p>
+        </main>
 
         <div class="c-form">
             <div class="c-form__item">
                 <label class="c-form__label" for="field-item">お問い合わせ項目<span class="c-form__required">必須</span></label>
                 <select id="select" name="entry.368708745">
-                    <option class="option__input" value="バナー作成">バナー作成</option>
+                    <option class="option__input" value="バナー作成">&nbsp;バナー作成</option>
                     <option class="option__input" value="LP作成">LP作成</option>
                     <option class="option__input" value="WEBページ作成">WEBページ作成</option>
                     <option class="option__input" value="デザインのご相談">デザインのご相談</option>
@@ -79,7 +100,7 @@
             </div>
             <div class="c-form__item">
                 <label class="c-form__label" for="field-robot">ロボットではありませんか？<span
-                        class="c-form__required">必須</span><br>回答欄に表示されている言葉を<br>そのまま入力してください。</label>
+                        class="c-form__required">必須</span><br>回答欄に表示されている言葉をそのまま入力してください。</label>
                 <input name="entry.322127923" class="c-form__input" id="no_robot" placeholder="タスマニアデビル" type="text"
                     required="required" pattern="タスマニアデビル" />
             </div>
@@ -91,32 +112,16 @@
 
     <footer>
         <p>お気軽にお問い合わせ・ご相談ください。</p>
-        <div class="contact_botton">
-            <p><img class="airplane_pic" src="../images/airplane@2x.png" alt="送信ボタン">Contact</p>
+        <div class="contact_button">
+            <img src="../images/airplane@2x.png" alt="送信ボタン">
+            <p>Contact</p>
         </div>
         <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="インスタグラムアイコン">
-
         <p class="copyright">&copy;Yuki Kimber Portfolio</p>
         <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="トップに戻るボタン"></a></div>
     </footer>
 
-    <script>
-        var cursor = document.getElementById('cursor');
-        // カーソル用のdivタグをマウスに追従させる
-        document.addEventListener('mousemove', function (e) {
-            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-        });
-        // リンクにホバーした時にクラス追加、離れたらクラス削除
-        var link = document.querySelectorAll('a');
-        for (var i = 0; i < link.length; i++) {
-            link[i].addEventListener('mouseover', function (e) {
-                cursor.classList.add('cursor--hover');
-            });
-            link[i].addEventListener('mouseout', function (e) {
-                cursor.classList.remove('cursor--hover');
-            });
-        }
-    </script>
+    <script src="../js/script.js"></script>
 
     <script type="text/javascript">
         var submitted = false;
@@ -124,6 +129,7 @@
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
         onload="if(submitted){window.location='thanks.html';}"></iframe>
 
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

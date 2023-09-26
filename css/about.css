@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-.about_me {
+#about_me {
   margin-left: 7.5%;
-  padding-right: 30px;
+  padding-right: 60px;
 }
 h2 {
   text-align: center;
@@ -31,23 +31,68 @@ h2 img {
   border-left: 7px solid #a6b8c2;
   padding: 0 8px;
 }
-.skills {
+#skills {
   width: 22%;
   min-width: 90px;
 }
-.expertise {
+#expertise {
   width: 30%;
   min-width: 120px;
 }
-.about_me p {
+#about_me p {
   font-size: 1em;
   line-height: 2;
   margin-top: 10px;
   margin-bottom: 50px;
 }
-
 .my_name {
   width: 31%;
   margin-top: 50px;
   margin-bottom: 30px;
+}
+/* レスポンシブ */
+@media screen and (max-width: 767px) {
+  h2 img {
+    width: 50%;
+    margin: 80px 0 50px;
+  }
+  #about_me {
+    margin: 0;
+    padding: 0;
+  }
+  .myself {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .skills_info {
+    width: 90%;
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  #skills {
+    width: 23%;
+    min-width: 90px;
+  }
+  #expertise {
+    width: 32%;
+    min-width: 120px;
+  }
+  .my_name {
+    text-align: center;
+    width: 51%;
+    margin: 0 auto;
+  }
+  .my_pic {
+    width: 100%;
+    margin: 0;
+  }
+  #about_me p {
+    width: 90%;
+    margin-left: 30px;
+    padding-right: 50px;
+  }
+  .my_pic,
+  .skills_info {
+    flex-direction: column-reverse;
+  }
 }

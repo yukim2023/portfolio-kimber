@@ -8,6 +8,7 @@
     <title>ポートフォリオ Yuki Kimber</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -19,64 +20,74 @@
             <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#service">Service</a></li>
+                    <li><a href="./index.html#service">Service</a></li>
                     <li><a href="../ja/works.html">Works</a></li>
                     <li><a href="../ja/about.html">About me</a></li>
                     <li><a href="../ja/contact.html">Contact</a></li>
                     <li><a href=""><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="./index.html#service">Service</a></li>
+                    <li><a href="../ja/works.html">Works</a></li>
+                    <li><a href="../ja/about.html">About me</a></li>
+                    <li><a href="../ja/contact.html">Contact</a></li>
+                    <li><a href=""><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
+                    <li><a href=""></a>English</li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
+    <div class="main_visual">
         <picture>
-            <img src="../images/top_main.webp" alt="Web designer Yuki Kimber">
+            <source media="(max-width: 767px)" srcset="../images/top_main_sp.jpg">
+            <img src="../images/top_main.webp" alt="朝日の写真を撮る瞬間">
         </picture>
+    </div>
+
+    <main>
         <div class="catch_copy">
             <h2><img src="../images/top_subject_bold@2x.png" alt="伝えたいことはなんですか？"></h2>
         </div>
-        <p>ホームページを訪れたユーザーがそのページをそのまま閲覧し続けたいと思うか、<br>
+        <p>ホームページを訪れたユーザーがそのページをそのまま閲覧し続けたいと思うか、<br class="pc_br">
             他に移動するか判断する時間は、はじめの3秒で決まると言われています。<br>
-            ページを訪れるユーザー目線で見た「見やすさ」「使いやすさ」を優先し、<br>
+            ページを訪れるユーザー目線で見た「見やすさ」「使いやすさ」を優先し、<br class="pc_br">
             シンプルでわかりやすいデザインを心がけています。<br>
-            そして今の時代に必要不可欠なレスポンシブデザイン- PC、タブレット、スマートフォン…<br>
+            そして今の時代に必要不可欠なレスポンシブデザイン- PC、タブレット、スマートフォン…<br class="pc_br">
             異なる画面サイズに合わせサイズを調整する見やすいページ作りに対応します。</p>
     </main>
-    <section id="table_of_contents">
-        <div class="facing_page"><img src="../images/book.jpg" alt="もくじ"></div>
 
-        <div class="contents_innner">
+    <section id="table_of_contents">
+        <div class="contents_inner">
             <div class="index">
-                <h5>もくじ</h5>
-            </div>
-            <div class="contents_page">
-                <ul class="contents_detail">
-                    <li>サービス内容</li>
-                    <li>過去の作品</li>
-                    <li>スキル</li>
-                    <li>得意分野</li>
-                    <li>私について</li>
-                    <li>お問い合わせ・お仕事依頼のご相談</li>
+                <div class="index_heading">も　く　じ</div>
+                <ul class="index_list">
+                    <li><span>サービス内容</span><a class="circle_1" href="#service">Service</a></li>
+                    <li><span>過去の作品</span><a class="circle_2" href="#works"><span>My <br>works</span></a></li>
+                    <li><span>スキル</span><a class="circle_1" href="/about.html#skills">Skills</a></li>
+                    <li><span>得意分野</span><a class="circle_1" href="/about.html#expertise">Expertise</a></li>
+                    <li><span>私について</span><a class="circle_2" href="./about.html"><span>About <br>me</span></a></li>
+                    <li><span>お問い合わせ・<br>お仕事依頼のご相談</span><a class="circle_1" href="./contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
-
-        <ul class="index_circle">
-            <li><a class="circle_1" href="#service">Service</a></li>
-            <li><a class="circle_2" href="#works"><span>My<br>works</span></a></li>
-            <li><a class="circle_1" href="#skills">Skills</a></li>
-            <li><a class="circle_1" href="#expertise">Expertise</a></li>
-            <li><a class="circle_2" href="#about_me"><span>About<br>me</span></a></li>
-            <li><a class="circle_1" href="#contact">Contact</a></li>
-        </ul>
     </section>
 
     <section id="service">
         <h3><img src="../images/service@2x.png" alt="サービス"></h3>
         <div class="direction">
             <div class="pictogram">
-                <img src="../images/direction.jpg" alt="ディレクション">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="../images/direction_sp.jpg">
+                    <img src="../images/direction.jpg" alt="ディレクション">
+                </picture>
             </div>
             <div class="details">
                 <h4>ディレクション</h4>
@@ -85,7 +96,10 @@
         </div>
         <div class="design">
             <div class="pictogram">
-                <img src="../images/design.jpg" alt="デザイン">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="../images/design_sp.jpg">
+                    <img src="../images/design.jpg" alt="デザイン">
+                </picture>
             </div>
             <div class="details">
                 <h4>デザイン</h4>
@@ -95,7 +109,10 @@
         </div>
         <div class="cording">
             <div class="pictogram">
-                <img src="../images/cording.jpg" alt="コーディング">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="../images/cording_sp.jpg">
+                    <img src="../images/cording.jpg" alt="コーディング">
+                </picture>
             </div>
             <div class="details">
                 <h4>コーディング</h4>
@@ -105,7 +122,10 @@
         </div>
         <div class="translation">
             <div class="pictogram">
-                <img src="../images/translation.jpg" alt="翻訳 日⇔英">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="../images/translation_sp.jpg">
+                    <img src="../images/translation.jpg" alt="翻訳 日⇔英">
+                </picture>
             </div>
             <div class="details">
                 <h4>翻訳 日⇔英</h4>
@@ -116,38 +136,22 @@
         </div>
     </section>
 
-    <section id="works">
+    <section id="workbook">
         <h3><img src="../images/my_works@2x.png" alt="my works"></h3>
     </section>
 
     <footer>
         <p>お気軽にお問い合わせ・ご相談ください。</p>
-        <div class="contact_botton">
-            <p><img class="airplane_pic" src="../images/airplane@2x.png" alt="送信ボタン">Contact</p>
+        <div class="contact_button">
+            <img src="../images/airplane@2x.png" alt="送信ボタン">
+            <p>Contact</p>
         </div>
         <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="インスタグラムアイコン">
-
         <p class="copyright">&copy;Yuki Kimber Portfolio</p>
         <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="トップに戻るボタン"></a></div>
     </footer>
 
-    <script>
-        var cursor = document.getElementById('cursor');
-        // カーソル用のdivタグをマウスに追従させる
-        document.addEventListener('mousemove', function (e) {
-            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-        });
-        // リンクにホバーした時にクラス追加、離れたらクラス削除
-        var link = document.querySelectorAll('a');
-        for (var i = 0; i < link.length; i++) {
-            link[i].addEventListener('mouseover', function (e) {
-                cursor.classList.add('cursor--hover');
-            });
-            link[i].addEventListener('mouseout', function (e) {
-                cursor.classList.remove('cursor--hover');
-            });
-        }
-    </script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

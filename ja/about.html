@@ -8,6 +8,7 @@
     <title>ABOUT｜自己紹介 - ポートフォリオ Yuki Kimber</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -19,40 +20,60 @@
             <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="../ja/index.html#service">Service</a></li>
+                    <li><a href="./index.html#service">Service</a></li>
                     <li><a href="../ja/works.html">Works</a></li>
                     <li><a href="../ja/about.html">About me</a></li>
                     <li><a href="../ja/contact.html">Contact</a></li>
                     <li><a href=""><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="./index.html#service">Service</a></li>
+                    <li><a href="../ja/works.html">Works</a></li>
+                    <li><a href="../ja/about.html">About me</a></li>
+                    <li><a href="../ja/contact.html">Contact</a></li>
+                    <li><a href=""><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
+                    <li><a href=""></a>English</li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <picture>
-        <img src="../images/about.webp" alt="ハンモックハンモック">
-    </picture>
-    <div class="about_me">
+    <div class="main_visual">
+        <picture>
+            <source media="(max-width: 767px)" srcset="../images/about_sp.jpg">
+            <img src="../images/about.webp" alt="ハンモック">
+        </picture>
+    </div>
+
+    <div id="about_me">
         <h2><img src="../images/about_me@2x.png" alt="私について"></h2>
         <div class="myself">
             <div class="my_pic"><img src="../images/me_pic.jpg" alt="私のイラスト"></div>
             <div class="skills_info">
-                <h3 class="skills"><img src="../images/skills@2x.png" alt="できること"></h3>
+                <h3 id="skills"><img src="../images/skills@2x.png" alt="できること"></h3>
                 <p>Illustrator、Photoshop<br>
                     HTML、CSS<br>
                     英語 翻訳</p>
-                <h3 class="expertise"><img src="../images/expertise@2x.png" alt="得意な分野"></h3>
-                <p>容系分野のデザインが得意です。<br>
+                <h3 id="expertise"><img src="../images/expertise@2x.png" alt="得意な分野"></h3>
+                <p>美容系分野のデザインが得意です。<br>
                     ネイリスト検定１級、ジェル検定上級、美容師免許所持。<br>
                     美容師のちにネイリストに転職し、長年美容業界に携わってきたので、ネイルサロンと美容室に関しては熟知しています。</p>
             </div>
         </div>
-        <img class="my_name" src="../images/name@2x.png" alt="Yuki Kimber">
+        <div class="my_name">
+            <img src="../images/name@2x.png" alt="Yuki Kimber">
+        </div>
         <p>オーストラリア タスマニア州在住10年目。<br>
             過去にニュージランドとオーストラリアへのワーキングホリデー、カナダ留学で英語を勉強。<br>
             都会での生活に疲れ、自然豊かなタスマニアへ移住。<br>
             犬と一緒にビーチ沿いを散歩したり、カフェ巡りをしたり、夏はキャンプに行ったり、自然に囲まれてのんびり過ごしています。<br>
-            <br>
         </p>
         <p>小さい頃から本を読むのが好きで、小学生の時は週末になると学校から借りれる本の数では物足りず、公立の図書館からも本を借りてきて、読書に没頭していました。大人になった今でも図書館や本屋さんは、私にとってワクワクして時間を忘れてしまう場所です。<br>
             読み進めていくうちにその世界観に引き込まれていく感じ。次のページをめくる時のワクワク感…。<br>
@@ -62,32 +83,16 @@
 
     <footer>
         <p>お気軽にお問い合わせ・ご相談ください。</p>
-        <div class="contact_botton">
-            <p><img class="airplane_pic" src="../images/airplane@2x.png" alt="送信ボタン">Contact</p>
+        <div class="contact_button">
+            <img src="../images/airplane@2x.png" alt="送信ボタン">
+            <p>Contact</p>
         </div>
         <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="インスタグラムアイコン">
-
         <p class="copyright">&copy;Yuki Kimber Portfolio</p>
         <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="トップに戻るボタン"></a></div>
     </footer>
 
-    <script>
-        var cursor = document.getElementById('cursor');
-        // カーソル用のdivタグをマウスに追従させる
-        document.addEventListener('mousemove', function (e) {
-            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-        });
-        // リンクにホバーした時にクラス追加、離れたらクラス削除
-        var link = document.querySelectorAll('a');
-        for (var i = 0; i < link.length; i++) {
-            link[i].addEventListener('mouseover', function (e) {
-                cursor.classList.add('cursor--hover');
-            });
-            link[i].addEventListener('mouseout', function (e) {
-                cursor.classList.remove('cursor--hover');
-            });
-        }
-    </script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
