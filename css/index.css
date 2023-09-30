@@ -301,7 +301,7 @@ main p {
 
 #page_turn {
   max-width: 1000px;
-  width: 100%;
+  width: 100% !important;
   height: 500px;
   margin: 0 auto;
   display: flex;
@@ -326,4 +326,18 @@ ul::after {
   content: "";
   display: block;
   clear: both;
+}
+
+#page_turn {
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 767px) {
+  #page_turn {
+    height: 390px !important;
+  }
+}
+@media screen and (min-width: 768px) { 
+  .page-wrapper {
+    width: 50% !important;
+  } 
 }

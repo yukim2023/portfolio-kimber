@@ -256,6 +256,7 @@ footer p {
   }
 
   nav.sp_nav {
+    visibility: hidden;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -311,7 +312,8 @@ footer p {
 
   /* jQueryで付与・削除する？ */
   nav.sp_nav.active {
-    opacity: 100;
+    opacity: 1;
+    visibility: visible;
   }
 
   /* ↑ ここまでハンバーガー ↑ */

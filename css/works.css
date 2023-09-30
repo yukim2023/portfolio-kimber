@@ -204,6 +204,42 @@ h4 {
   vertical-align: middle;
   height: 100%;
 }
+/* モーダルのスクロールバーを非表示 */
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+.modal-control {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  margin: auto;
+}
+.modal-prev {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: translate(-50%) rotate(-135deg);
+}
+.modal-next {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: translateY(-50%) rotate(45deg);
+}
 .modal-container.active {
   opacity: 1;
   visibility: visible;
