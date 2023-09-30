@@ -48,6 +48,26 @@ $(function () {
       container.removeClass("active");
     }
   });
+
+  // moreをクリックしたら表示されているスライダーのモーダルを表示
+  $('.more').on('click', function(){
+    let target = $(this).next().find('.slick-current').data('modal');
+    $("." + target).addClass('active');
+    return false;
+  });
+
+  // モーダル内矢印の制御
+  $('.modal-next').on('click', function(){
+    $(this).closest('.modal-container').removeClass('active');
+    $(this).closest('.modal-container').next().addClass('active');
+    return false;
+  });
+  $('.modal-prev').on('click', function(){
+    $(this).closest('.modal-container').removeClass('active');
+    $(this).closest('.modal-container').prev().addClass('active');
+    return false;
+  });
+
 });
 
 // ↓ ハンバーガー
@@ -55,11 +75,13 @@ $(function () {
 $(function () {
   $(".sp_btn").click(function () {
     $(this).toggleClass("active");
+    $('.sp_nav').toggleClass("active");
 
-    if ($(this).hasClass("active")) {
-      $(".sp_nav").addClass("active");
-    } else {
-      $(".sp_nav").removeClass("active");
-    }
+    // こちらのコードは不要
+    // if ($(this).hasClass("active")) {
+    //   $(".sp_nav").addClass("active");
+    // } else {
+    //   $(".sp_nav").removeClass("active");
+    // }
   });
 });

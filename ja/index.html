@@ -11,7 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../js/turn.js"></script>
-    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -20,7 +19,7 @@
 
     <header>
         <div class="header_wrap">
-            <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
+            <h1 class="header_logo"><a href="./index.html"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
             <nav class="pc_nav">
                 <ul>
                     <li><a href="./index.html#service">Service</a></li>
@@ -143,43 +142,45 @@
         <h3><img src="../images/my_works@2x.png" alt="my works"></h3>
     </section>
 
-    <div id="page_turn">
-        <div class="page">
-            <img src="../images/cover.webp">
+    <div class="turn" style="position: relative;">
+        <div id="page_turn">
+            <div class="page">
+                <img src="../images/cover.webp">
+            </div>
+            <div>
+                <img src="../images/page1.webp">
+            </div>
+            <div>
+                <img src="../images/page2.webp">
+            </div>
+            <div>
+                <img src="../images/page3.webp">
+            </div>
+            <div>
+                <img src="../images/page4.webp">
+            </div>
+            <div>
+                <img src="../images/page5.webp">
+            </div>
+            <div>
+                <img src="../images/page6.webp">
+            </div>
+            <div>
+                <img src="../images/page7.webp">
+            </div>
+            <div>
+                <img src="../images/page8.webp">
+            </div>
         </div>
-        <div>
-            <img src="../images/page1.webp">
-        </div>
-        <div>
-            <img src="../images/page2.webp">
-        </div>
-        <div>
-            <img src="../images/page3.webp">
-        </div>
-        <div>
-            <img src="../images/page4.webp">
-        </div>
-        <div>
-            <img src="../images/page5.webp">
-        </div>
-        <div>
-            <img src="../images/page6.webp">
-        </div>
-        <div>
-            <img src="../images/page7.webp">
-        </div>
-        <div>
-            <img src="../images/page8.webp">
-        </div>
+        <ul class="next_page">
+            <li>
+                <span id="prevpage">Previous page</span>
+            </li>
+            <li>
+                <span id="nextpage">Next page</span>
+            </li>
+        </ul>
     </div>
-    <ul class="next_page">
-        <li>
-            <span id="prevpage">Previous page</span>
-        </li>
-        <li>
-            <span id="nextpage">Next page</span>
-        </li>
-    </ul>
 
 
 
@@ -197,22 +198,27 @@
 
     <script src="../js/script.js"></script>
     <script>
-        $(function () {
-            $('#page_turn').turn(
-                {
-                    // 自動でページをめくったときの高さ
-                    elevation: 50,
-
-                    // ページめくりのスピード(ms)
-                    duration: 1000,
-
-                    // ページをめくるときの影->有効
-                    gradients: true,
-
-                    // 自動中央揃え->無効
-                    autoCenter: false,
-                }
-            );
+        $(function () {      
+            if (window.matchMedia('(max-width: 767px)').matches) {
+                $('#page_turn').turn(
+                    {
+                        elevation: 50, // 自動でページをめくったときの高さ
+                        duration: 1000, // ページめくりのスピード(ms)
+                        gradients: true, // ページをめくるときの影->有効
+                        autoCenter: false, // 自動中央揃え->無効
+                        display: 'single',
+                    }
+                );
+            } else if (window.matchMedia('(min-width:768px)').matches) {                
+                $('#page_turn').turn(
+                    {
+                        elevation: 50, // 自動でページをめくったときの高さ
+                        duration: 1000, // ページめくりのスピード(ms)
+                        gradients: true, // ページをめくるときの影->有効
+                        autoCenter: false, // 自動中央揃え->無効
+                    }
+                );
+            }
 
             $('#prevpage').click(function () {
                 $('#page_turn').turn('previous');
