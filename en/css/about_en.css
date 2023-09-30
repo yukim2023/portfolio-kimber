@@ -16,7 +16,7 @@ h2 img {
   margin: 100px 0 50px;
 }
 .my_pic {
-  width: 50%;
+  width: 40%;
   margin-left: 0;
 }
 .my_pic img {
@@ -24,7 +24,7 @@ h2 img {
 }
 .skills_info {
   display: block;
-  width: 50%;
+  width: 60%;
 }
 .skills_info h3 {
   border-left: 7px solid #a6b8c2;
@@ -38,23 +38,26 @@ h2 img {
   width: 30%;
   min-width: 120px;
 }
+.skills_info p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
 .my_name {
-  width: 31%;
+  width: 38%;
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .my_name,
 .introduction {
   margin-left: 7%;
 }
-.skills_info p,
 .introduction p {
   font-size: 1em;
-  line-height: 2;
+  line-height: 1.5;
   margin-top: 10px;
-  margin-bottom: 50px;
 }
-
 /* レスポンシブ */
 @media screen and (max-width: 767px) {
   #about_me {
@@ -92,8 +95,5 @@ h2 img {
   }
   .introduction {
     margin-left: 0;
-  }
-  .introduction p {
-    margin-bottom: 0;
   }
 }

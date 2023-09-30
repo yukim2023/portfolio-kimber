@@ -20,8 +20,7 @@ li {
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
   color: #293850;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 a {
   /*下線を消す*/
@@ -66,7 +65,6 @@ img {
   margin-left: 40%;
 }
 .pc_nav ul li {
-  font-weight: bold;
   font-size: 16px;
   text-align: center;
 }
@@ -105,9 +103,10 @@ a {
   width: 40px;
   height: 40px;
   opacity: 0.5;
-  color: #a6b8c2;
+  color: #293850;
 }
-動き確認用ボタン .btn {
+/*動き確認用ボタン
+.btn {
   display: inline-block;
   min-width: 300px;
   margin: 20px;
@@ -188,8 +187,8 @@ footer p {
     padding-top: 50px;
     cursor: pointer;
   }
-  .contact_button {
-    width: 250px;
+  contact_button {
+    width: 200px;
     margin: 25px auto 40px;
     padding: 20px 0;
   }
@@ -296,7 +295,7 @@ footer p {
   }
 
   nav.sp_nav ul li:hover {
-    color: #7589a0;
+    color: #c7d7dd;
   }
   nav.sp_nav ul li a {
     display: block;

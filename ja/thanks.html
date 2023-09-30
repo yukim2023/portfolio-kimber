@@ -21,10 +21,10 @@
             <nav class="pc_nav">
                 <ul>
                     <li><a href="./index.html#service">Service</a></li>
-                    <li><a href="../ja/works.html">Works</a></li>
-                    <li><a href="../ja/about.html">About me</a></li>
-                    <li><a href="../ja/contact.html">Contact</a></li>
-                    <li><a href=""><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
+                    <li><a href="./works.html">Works</a></li>
+                    <li><a href="./about.html">About me</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="../en/thanks_en.html"><img src="../images/globe_en.png" alt="英語ページへ"></a></li>
                 </ul>
             </nav>
 
@@ -36,11 +36,11 @@
             <nav class="sp_nav">
                 <ul>
                     <li><a href="./index.html#service">Service</a></li>
-                    <li><a href="../ja/works.html">Works</a></li>
-                    <li><a href="../ja/about.html">About me</a></li>
-                    <li><a href="../ja/contact.html">Contact</a></li>
-                    <li><a href=""><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
-                    <li><a href=""></a>English</li>
+                    <li><a href="./works.html">Works</a></li>
+                    <li><a href="./about.html">About me</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="../en/thanks_en.html"><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
+                    <li><a href="../en/thanks_en.html">English</a></li>
                 </ul>
             </nav>
 
@@ -55,25 +55,24 @@
     </div>
 
     <main>
-        <h2>お問い合わせありがとうございます。</h2>
+        <h2><span class="line_break">お問い合わせ</span><span class="line_break">ありがとうございます。</span></h2>
         <p>お送りいただいた内容を確認の上、３営業日以内に折り返しご連絡させていただきます。<br>
-            ご入力いただいたメールアドレスへ自動返信の確認メールをお送りしておりますが、<br>
-            しばらく経ってもメールが届かない場合は迷惑メールフォルダに振り分けられている可能性がございます。<br>
-            ドメイン指定をされている場合は、@google.comからのメールが受信できるよう設定をお願い致します。<br>
+            ご入力いただいたメールアドレスへ自動返信の確認メールをお送りしておりますが、しばらく経ってもメールが届かない場合は迷惑メールフォルダに振り分けられている可能性がございます。<br>
+            <span class="line_break">@google.com</span>からのメールが受信できるよう設定をお願い致します。
         </p>
     </main>
 
     <div class="thanks_pic">
         <picture>
             <source media="(max-width: 767px)" srcset="../images/thanks_pic_sp.jpg">
-            <img src="../images/thanks_pic.jpg" alt="喜ぶ女の子イラスト">
+            <img src="../images/thanks_pic.webp" alt="喜ぶ女の子イラスト">
         </picture>
     </div>
 
     <footer>
         <p>お気軽にお問い合わせ・ご相談ください。</p>
         <div class="contact_button">
-            <img src="../images/airplane@2x.png" alt="送信ボタン">
+            <a href="./contact.html"><img src="../images/airplane@2x.png" alt="コンタクトボタン"></a>
             <p>Contact</p>
         </div>
         <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="インスタグラムアイコン">
@@ -83,19 +82,6 @@
 
     <script src="../js/script.js"></script>
 
-    <script>
-        $(function () {
-            $('.sp_btn').click(function () {
-                $(this).toggleClass('active');
-
-                if ($(this).hasClass('active')) {
-                    $('.sp_nav').addClass('active');
-                } else {
-                    $('.sp_nav').removeClass('active');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
