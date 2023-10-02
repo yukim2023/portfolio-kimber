@@ -1,19 +1,24 @@
 @charset "utf-8";
-h2 img {
-  width: 45%;
+
+main {
+  margin: 124px 7% 50px;
 }
-.catch_copy {
+
+h2 {
   text-align: center;
-  margin-top: 124px;
-  font-family: "dream-big-wide", sans-serif;
-  font-weight: 700;
+  font-size: 1.8em;
+  font-family: "tangier", sans-serif;
+  font-weight: 300;
   font-style: normal;
+  font-size: 3em;
+  letter-spacing: 0.05em;
 }
+
 main p {
-  text-align: center;
+  text-align: left;
   font-size: 16px;
   line-height: 48px;
-  margin: 50px 30px 80px 30px;
+  margin: 50px 30px 80px 0;
 }
 
 /* もくじ */
@@ -164,7 +169,7 @@ main p {
 }
 .details {
   width: 75%;
-  padding-left: 30px;
+  padding-left: 50px;
 }
 #service h4 {
   font-size: 24px;

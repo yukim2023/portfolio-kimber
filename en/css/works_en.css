@@ -38,56 +38,50 @@ h4 {
   border-left: 7px solid #a6b8c2;
   padding: 0 8px;
 }
-/*ーーーーーーmoreボタン↓ーーーーーー*/
+/*ーーーーーー ↓ more 矢印 ↓ ーーーーーー*/
+.more_btn {
+  text-align: right;
+  margin-bottom: 50px;
+}
 .arrow {
-  display: inline-block;
   position: relative;
-  width: 100px;
-  margin: 50px 5px 15px 0;
-  padding: 0 30px 10px 20px;
+  display: inline-block;
+  width: 120px;
+  padding: 10px 30px 0 20px;
   text-align: center;
   color: #a6b8c2;
-  cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
 }
 .arrow::after {
   display: block;
   position: absolute;
   content: "";
-  top: calc(50% - 5px);
-  right: 0;
-  width: 50px;
+  top: calc(50% + 5px);
+  right: 35px;
+  width: 30px;
   height: 5px;
-  border-right: 3px solid #a6b8c2;
-  border-bottom: 2px solid #a6b8c2;
+  border-right: 2px solid #a6b8c2;
+  border-bottom: 1px solid #a6b8c2;
   transform: skew(45deg);
   transition: 0.3s;
 }
 .arrow:hover::after {
-  right: 110px;
-}
-.modal-open {
-  text-align: right;
+  right: 20px;
+  width: 30px;
 }
 
-/*ーーーーーーmoreボタン↑ーーーーーー*/
+/*ーーーーーー ↓ スライダー ↓ ーーーーーー*/
+
 .slider img,
 .modal-open {
   width: 80%;
   margin: 0 auto;
 }
-/*ーーーーーー
-＜＜＜＜調整中！＞＞＞
-縦横比の異なる画像をどう並べたら馴染むか？
-.premium_burger img {
-  width: 100%;
-}
-/*ーーーーーー↑ ↑ーーーーーー*/
 .hairsalon,
 .mobile {
-  border: 1px solid #b3b3b3;
+  border: 0.5px solid #b3b3b3;
 }
-#bunner,
+.banner_group,
 #lp_design,
 #web_page {
   margin-bottom: 150px;
@@ -113,8 +107,8 @@ h4 {
   border: 0;
   text-indent: -9999px;
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   margin: 0 10px;
   outline: 0;
   border-radius: 50%;
@@ -215,21 +209,38 @@ h4 {
   max-width: 700px;
   width: 90%;
 }
+
 .modal-close {
   position: absolute;
-  top: -30px;
-  right: 0;
-  font-size: 14px;
-  color: #fff;
-  background-color: #a6b8c2;
-  padding: 4px 15px;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-  transition: opacity 0.6s;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #7589a0;
+  transition: all 2s;
+}
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 22px;
+  background: #fff;
+}
+.modal-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .modal-close:hover {
-  opacity: 0.6;
+  transform: rotate(180deg);
 }
+
 .no_scroll {
   overflow: hidden;
 }

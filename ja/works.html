@@ -20,14 +20,14 @@
 
     <header>
         <div class="header_wrap">
-            <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
+            <h1 class="header_logo"><a href="./index.html"><img src="../images/logo@2x.png" alt="ロゴ"></a></h1>
             <nav class="pc_nav">
                 <ul>
                     <li><a href="./index.html#service">Service</a></li>
-                    <li><a href="../ja/works.html">Works</a></li>
-                    <li><a href="../ja/about.html">About me</a></li>
-                    <li><a href="../ja/contact.html">Contact</a></li>
-                    <li><a href="../en/works.html"><img src="../images/ 65.png" alt="英語ページへ"></a></li>
+                    <li><a href="./works.html">Works</a></li>
+                    <li><a href="./about.html">About me</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="../en/works_en.html"><img src="../images/globe_en.png" alt="英語ページへ"></a></li>
                 </ul>
             </nav>
             <div class="sp_btn">
@@ -38,11 +38,11 @@
             <nav class="sp_nav">
                 <ul>
                     <li><a href="./index.html#service">Service</a></li>
-                    <li><a href="../ja/works.html">Works</a></li>
-                    <li><a href="../ja/about.html">About me</a></li>
-                    <li><a href="../ja/contact.html">Contact</a></li>
-                    <li><a href="../en/works.html"><img src="../images/ 65.png" alt="英語ページへ"></a></li>
-                    <li><a href="../en/works.html"></a>English</li>
+                    <li><a href="./works.html">Works</a></li>
+                    <li><a href="./about.html">About me</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="../en/works_en.html"><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
+                    <li><a href="../en/works_en.html"></a>English</li>
                 </ul>
             </nav>
         </div>
@@ -55,49 +55,62 @@
         <div id="category">
             <h3>Category</h3>
             <ul class="keywords">
-                <li><a href="#bunner">バナー</a></li>
+                <li><a href="#banner">バナー</a></li>
                 <li><a href="#lp_design">LP</a></li>
                 <li><a href="#web_page">Webページ</a></li>
                 <li><a href="#traslation">翻訳</a></li>
                 <li><a href="#other">その他</a></li>
             </ul>
         </div>
-        <div id="bunner">
-            <h4>バナー広告</h4>
+    </div>
 
-            <div class="more"><a href="" class="arrow">More</a></div>
+    <section id="banner">
+        <div class="banner_group">
+            <h4>バナー広告</h4>
+            <div class="more"><span class="arrow">More</span></div>
             <div slider_photos>
                 <ul class="slider">
-                    <li class="premium_burger" data-modal="modal03"><img src="../images/kadai03middle.webp"
+                    <li class="premium_burger" data-modal="modal03"><img src="../images/kadai03_pop.webp"
                             alt="ハンバーガーのバナー広告1"></li>
-                    <li data-modal="modal03"><img src="../images/kadai03_pop.webp" alt="ハンバーガーのバナー広告2"></li>
-                    <li data-modal="modal02"><img src="../images/kadai02.webp" alt="旅行予約アプリのバナー広告"></li>
-                    <li data-modal="modal04"><img src="../images/kadai_other.webp" alt="ウェブデザインオンライン講座のバナー広告"></li>
+                    <li data-modal="modal03"><img src="../images/kadai03middle.webp" alt="ハンバーガーのバナー広告2"></li>
                     <li data-modal="modal01"><img class="mobile" src="../images/kadai01.webp" alt="スマホの新学割プランのバナー広告">
                     </li>
+                    <li data-modal="modal02"><img src="../images/kadai02.webp" alt="旅行予約アプリのバナー広告"></li>
+                    <li data-modal="modal04"><img src="../images/kadai_other.webp" alt="ウェブデザインオンライン講座のバナー広告"></li>
                 </ul>
             </div>
         </div>
-        <div id="lp_design">
+    </section>
+
+    <section id="lp_design">
+        <div class="lp_design_group">
             <h4>LP ランディングページ</h4>
-            <div class="more"><a href="" class="arrow">More</a></div>
+            <div class="more"><span class="arrow">More</span></div>
             <ul class="slider">
-                <li data-modal="modal05"><img class="hairsalon" src="../images/kadai05.jpg" alt="美容室のランディングページ"></li>
+                <li data-modal="modal05"><img class="hairsalon" src="../images/kadai05.jpg" alt="美容室のランディングページ">
+                </li>
             </ul>
         </div>
-        <div id="web_page">
+    </section>
+
+    <section id="web_page">
+        <div class="web_page_group">
             <h4>Webページ</h4>
-            <div class="more"><a href="" class="arrow">More</a></div>
+            <div class="more"><span class="arrow">More</span></div>
             <ul class="slider">
                 <li data-modal="modal06"><img src="../images/kadai_cording@2x-100.jpg" alt="カフェのウェブページ"></li>
                 <li data-modal="modal07"><img src="../images/kadai04@2x-100.jpg" alt="レンタルワークスペースのウェブページ"></li>
             </ul>
         </div>
-    </div>
+    </section>
 
     <div class="modal-container modal01">
+        <div class="modal-control">
+            <div class="modal-prev"></div>
+            <div class="modal-next"></div>
+        </div>
         <div class="modal-body">
-            <button type="button" class="modal-close">Close</button>
+            <button type="button" class="modal-close"></button>
             <div class="modal-content">
                 <img src="../images/kadai01.webp" alt="スマホの新学割プランの告知バナー">
                 <div class="summary">
@@ -130,8 +143,12 @@
     </div>
 
     <div class="modal-container modal02">
+        <div class="modal-control">
+            <div class="modal-prev"></div>
+            <div class="modal-next"></div>
+        </div>
         <div class="modal-body">
-            <button type="button" class="modal-close">Close</button>
+            <button type="button" class="modal-close"></button>
             <div class="modal-content">
                 <img src="../images/kadai02.webp" alt="旅行ポータルサイトのアプリのバナー">
                 <div class="summary">
@@ -164,8 +181,12 @@
     </div>
 
     <div class="modal-container modal03">
+        <div class="modal-control">
+            <div class="modal-prev"></div>
+            <div class="modal-next"></div>
+        </div>
         <div class="modal-body">
-            <button type="button" class="modal-close">Close</button>
+            <button type="button" class="modal-close"></button>
             <div class="modal-content">
                 <img src="../images/kadai03_down.webp" alt="ハンバーガー新商品のバナーPOP">
                 <img src="../images/kadai03_pop.webp" alt="ハンバーガー新商品のバナー高級感">
@@ -179,7 +200,7 @@
                         </li>
                         <li><span padding-left: 3px;
                                 style="font-weight:bold; border-left:5px solid #a6b8c2; padding-left: 3px;">&nbsp;背景&nbsp;</span><br>新メニュー告知のためのバナー<br>InstagramとFacebookに掲載
-                        </li> padding-left: 3px;
+                        </li>
                         <li><span padding-left: 3px;
                                 style="font-weight:bold; border-left:5px solid #a6b8c2; padding-left: 3px;">&nbsp;目的&nbsp;</span><br>・販売促進<br>・来店促進
                         </li>
@@ -192,7 +213,7 @@
                             <br>の２パターン
                         </li>
                         <li><span
-                                style="font-weight:bold; border-left:5px solid #a6b8c2; padding-left: 3px;">&nbsp;デザイン&nbsp;</span>高級感バージョン<br>POPバージョン<br>の２パターン
+                                style="font-weight:bold; border-left:5px solid #a6b8c2; padding-left: 3px;">&nbsp;デザイン&nbsp;</span><br>高級感バージョン<br>POPバージョン<br>の２パターン
                         </li>
                     </ul>
                 </div>
@@ -201,8 +222,12 @@
     </div>
 
     <div class="modal-container modal04">
+        <div class="modal-control">
+            <div class="modal-prev"></div>
+            <div class="modal-next"></div>
+        </div>
         <div class="modal-body">
-            <button type="button" class="modal-close">Close</button>
+            <button type="button" class="modal-close"></button>
             <div class="modal-content">
                 <img src="../images/kadai_other.webp" alt="講座の案内のためのバナー">
                 <div class="summary">
@@ -235,8 +260,12 @@
     </div>
 
     <div class="modal-container modal05">
+        <div class="modal-control">
+            <div class="modal-prev"></div>
+            <div class="modal-next"></div>
+        </div>
         <div class="modal-body">
-            <button type="button" class="modal-close">Close</button>
+            <button type="button" class="modal-close"></button>
             <div class="modal-content">
                 <img src="../images/kadai05_pc.webp" alt="美容室のLPデザイン">
                 <div class="summary">
@@ -268,9 +297,13 @@
         </div>
     </div>
 
-    <div class="modal-container modal07">
+    <div class="modal-container modal06">
+        <div class="modal-control">
+            <div class="modal-prev"></div>
+            <div class="modal-next"></div>
+        </div>
         <div class="modal-body">
-            <button type="button" class="modal-close">Close</button>
+            <button type="button" class="modal-close"></button>
             <div class="modal-content">
                 <img src="../images/kadai04_pc.webp" alt="コーワーキングスペースのWEBサイト">
                 <img src="../images/kadai04_sp@2x-100.jpg" alt="コーワーキングスペースのWEBサイト">
@@ -301,7 +334,10 @@
 
     <div class="modal-container modal07">
         <div class="modal-body">
-            <button type="button" class="modal-close">Close</button>
+            <div class="modal-control">
+                <div class="modal-prev"></div>
+                <div class="modal-next"></div>
+            </div><button type="button" class="modal-close"></button>
             <div class="modal-content">
                 <img src="../images/kadai_cording@2x-100.jpg" alt="カフェのWEBサイト">
                 <div class="side_by_side">
@@ -347,7 +383,7 @@
     <script src="../js/script.js"></script>
     <script>
         $(".slider").slick({   // ↓スライダー
-            autoplay: true,
+            autoplay: false,
             dots: true,
             fade: true,
         });

@@ -21,14 +21,12 @@ $(function () {
   var open = $(".slider li");
   var close = $(".modal-close"),
     container = $(".modal-container");
-
   /*//読み込んで5秒後にモーダルウィンドウを表示
   setTimeout(() => {
     container.addClass("active");
     return false;
   }, 100);
   */
-
   //開くボタンをクリックしたらモーダルを表示する
   open.on("click", function () {
     let target = $(this).data("modal");
@@ -36,17 +34,34 @@ $(function () {
     /* $("body").addClass("no_scroll"); // 背景固定/*/
     return false;
   });
-
   //closeボタンをクリックしたらモーダルウィンドウを閉じる
   close.on("click", function () {
     container.removeClass("active");
   });
-
   //モーダルウィンドウの外側をクリックしたらモーダルウィンドウを閉じる
   $(document).on("click", function (e) {
     if (!$(e.target).closest(".modal-body").length) {
       container.removeClass("active");
     }
+  });
+
+  // moreをクリックしたら表示されているスライダーのモーダルを表示
+  $(".more").on("click", function () {
+    let target = $(this).next().find(".slick-current").data("modal");
+    $("." + target).addClass("active");
+    return false;
+  });
+
+  // モーダル内矢印の制御
+  $(".modal-next").on("click", function () {
+    $(this).closest(".modal-container").removeClass("active");
+    $(this).closest(".modal-container").next().addClass("active");
+    return false;
+  });
+  $(".modal-prev").on("click", function () {
+    $(this).closest(".modal-container").removeClass("active");
+    $(this).closest(".modal-container").prev().addClass("active");
+    return false;
   });
 });
 
