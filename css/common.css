@@ -66,8 +66,8 @@ img {
   margin-left: 40%;
 }
 .pc_nav ul li {
-  font-weight: bold;
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
 }
 .pc_nav ul li img {
@@ -295,9 +295,12 @@ footer p {
     margin-top: -60px;
     padding-bottom: 200px;
   }
-
+  nav.sp_nav ul li a.small {
+    margin-top: 12px;
+    font-size: 18px;
+  }
   nav.sp_nav ul li:hover {
-    color: #7589a0;
+    color: #c7d7dd;
   }
   nav.sp_nav ul li a {
     display: block;

@@ -66,11 +66,12 @@ img {
 }
 .pc_nav ul li {
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
 }
 .pc_nav ul li img {
   width: 50px;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 .main_visual img {
   display: flex;
@@ -187,7 +188,7 @@ footer p {
     padding-top: 50px;
     cursor: pointer;
   }
-  contact_button {
+  .contact_button {
     width: 200px;
     margin: 25px auto 40px;
     padding: 20px 0;
@@ -293,7 +294,10 @@ footer p {
     margin-top: -60px;
     padding-bottom: 200px;
   }
-
+  nav.sp_nav ul li a.small {
+    margin-top: 12px;
+    font-size: 18px;
+  }
   nav.sp_nav ul li:hover {
     color: #c7d7dd;
   }
@@ -310,7 +314,8 @@ footer p {
 
   /* jQueryで付与・削除する？ */
   nav.sp_nav.active {
-    opacity: 100;
+    opacity: 1;
+    visibility: visible;
   }
 
   /* ↑ ここまでハンバーガー ↑ */

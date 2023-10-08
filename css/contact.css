@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-.contact_form {
+#contact_form {
   margin: 80px 50px 10%;
 }
 h2 {
   text-align: center;
 }
-.contact_form img {
+#contact_form img {
   width: 76%;
 }
 .info {
@@ -108,7 +108,7 @@ textarea.c-form__input {
 }
 
 @media (max-width: 768px) {
-  .contact_form {
+  #contact_form {
     margin: 60px 0 45px;
   }
   .info {
@@ -125,7 +125,7 @@ textarea.c-form__input {
     text-align: left;
     display: inline;
   }
-  .contact_form {
+  #contact_form {
     margin: 80px 0 50px 0;
   }
   #select {

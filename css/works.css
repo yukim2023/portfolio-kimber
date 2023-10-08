@@ -1,8 +1,11 @@
 @charset "utf-8";
 
-#works {
+#works,
+#banner,
+#lp_design,
+#web_page {
   max-width: 1000px;
-  margin-left: 10%;
+  margin: 0 auto;
   padding: 30px;
 }
 h2 {
@@ -15,11 +18,14 @@ h2 {
   width: 40%;
 }
 h3 {
+  text-align: center;
   font-size: 18px;
+  font-weight: lighter;
   margin-bottom: 15px;
 }
 .keywords {
   display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 .keywords li {
@@ -38,56 +44,51 @@ h4 {
   border-left: 7px solid #a6b8c2;
   padding: 0 8px;
 }
-/*ーーーーーーmoreボタン↓ーーーーーー*/
+/*ーーーーーー ↓ more 矢印 ↓ ーーーーーー*/
+.more {
+  text-align: right;
+  margin-bottom: 50px;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
 .arrow {
-  display: inline-block;
   position: relative;
-  width: 100px;
-  margin: 50px 5px 15px 0;
-  padding: 0 30px 10px 20px;
+  display: inline-block;
+  width: 120px;
+  padding: 10px 30px 0 20px;
   text-align: center;
   color: #a6b8c2;
-  cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
 }
 .arrow::after {
   display: block;
   position: absolute;
   content: "";
-  top: calc(50% - 5px);
-  right: 0;
-  width: 50px;
+  top: calc(50% + 5px);
+  right: 35px;
+  width: 30px;
   height: 5px;
-  border-right: 3px solid #a6b8c2;
-  border-bottom: 2px solid #a6b8c2;
+  border-right: 2px solid #a6b8c2;
+  border-bottom: 1px solid #a6b8c2;
   transform: skew(45deg);
   transition: 0.3s;
 }
 .arrow:hover::after {
-  right: 110px;
-}
-.modal-open {
-  text-align: right;
+  right: 20px;
+  width: 30px;
 }
 
-/*ーーーーーーmoreボタン↑ーーーーーー*/
+/*ーーーーーー ↓ スライダー ↓ ーーーーーー*/
+
 .slider img,
 .modal-open {
   width: 80%;
   margin: 0 auto;
 }
-/*ーーーーーー
-＜＜＜＜調整中！＞＞＞
-縦横比の異なる画像をどう並べたら馴染むか？
-.premium_burger img {
-  width: 100%;
-}
-/*ーーーーーー↑ ↑ーーーーーー*/
 .hairsalon,
 .mobile {
-  border: 1px solid #b3b3b3;
+  border: 0.5px solid #b3b3b3;
 }
-#bunner,
+#banner,
 #lp_design,
 #web_page {
   margin-bottom: 150px;
@@ -113,8 +114,8 @@ h4 {
   border: 0;
   text-indent: -9999px;
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   margin: 0 10px;
   outline: 0;
   border-radius: 50%;
@@ -144,15 +145,9 @@ h4 {
   width: 18px;
   height: 18px;
 }
-/*ーーーーーーーーーーーーーーーー*/
-/*モーダルを開くボタン 削除してmoreボタンに置き換える*/
-.modal-open {
-  width: 300px;
-  height: 50px;
-  color: #fff;
-  background: #000;
-}
+
 /*ーーーーーー ↓ モーダルウィンドウ ↓ ーーーーーー*/
+
 .modal-container {
   width: 100%;
   height: 100%;
@@ -171,12 +166,12 @@ h4 {
   margin-top: 80px;
 }
 .summary {
-  margin-top: 50px;
+  margin: 50px auto 0 10%;
 }
 .modal-content {
   background: #fff;
   text-align: left;
-  padding: 30px;
+  padding: 100px 30px;
 }
 .modal-txt li {
   font-size: 16px;
@@ -185,18 +180,24 @@ h4 {
   text-indent: -16px;
   margin: 0 auto 20px 20px;
 }
-.side_by_side {
+.responsive_img {
   display: flex;
-  max-width: 100%;
-  gap: 10px;
-  margin-top: 50px;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 700px;
+  margin-top: 80px;
 }
-.for_sp {
-  width: 20%;
+.sp_img {
+  width: 18%;
+  border: 0.5px solid #b3b3b3;
 }
-.for_pc {
-  max-width: 100%;
-  width: auto;
+.pc_img {
+  width: 77%;
+  border: 0.5px solid #b3b3b3;
+}
+
+.modal05 img {
+  border: 0.5px solid #b3b3b3;
 }
 .modal-container::before {
   content: "";
@@ -251,23 +252,87 @@ h4 {
   max-width: 700px;
   width: 90%;
 }
+
+/* 閉じるボタン */
 .modal-close {
   position: absolute;
-  top: -30px;
-  right: 0;
-  font-size: 14px;
-  color: #fff;
-  background-color: #a6b8c2;
-  padding: 4px 15px;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-  transition: opacity 0.6s;
+  top: -15px;
+  right: -10px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #7589a0;
+  transition: all 2s;
+}
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 22px;
+  background: #fff;
+}
+.modal-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .modal-close:hover {
-  opacity: 0.6;
+  transform: rotate(180deg);
 }
-.no_scroll {
+
+.body {
   overflow: hidden;
+}
+
+@media screen and (max-width: 790px) {
+  /* モーダルの矢印 */
+  .modal-prev {
+    position: fixed;
+    top: 70px;
+    left: 12%;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #b3b3b3;
+    border-right: 3px solid #b3b3b3;
+  }
+  .modal-next {
+    position: fixed;
+    top: 82px;
+    right: 14%;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #b3b3b3;
+    border-right: 3px solid #b3b3b3;
+  }
+
+  .modal-control {
+    height: auto;
+    z-index: 99;
+  }
+
+  .summary {
+    margin: 50px 0 0 12%;
+    padding: 0 10px;
+  }
+  .modal-content {
+    padding: 60px 10px;
+    margin-top: 30px;
+  }
+  .modal-close {
+    top: 12px;
+    right: -10px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #7589a0;
+    transition: all 2s;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -286,5 +351,20 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+  }
+  #banner,
+  #lp_design,
+  #web_page {
+    margin-bottom: 100px;
+  }
+  .more {
+    margin-bottom: 20px;
+  }
+  h4 {
+    margin: 0;
+  }
+  #works {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

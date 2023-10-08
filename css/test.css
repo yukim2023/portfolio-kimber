@@ -1,0 +1,156 @@
+@charset "utf-8";
+.main_visual img {
+  display: flex;
+  vertical-align: top;
+  margin-top: 60px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-weight: lighter;
+  margin-bottom: 50px;
+  letter-spacing: 0.1em;
+}
+.line_break {
+  display: inline-block;
+}
+main p {
+  text-align: left;
+  font-size: 1em;
+  line-height: 3;
+  letter-spacing: 0.02em;
+}
+span {
+  display: inline-block;
+}
+.thanks_pic img {
+  display: flex;
+  width: 100%;
+  margin: 120px 0 0;
+  vertical-align: bottom;
+}
+/* レスポンシブ */
+@media screen and (max-width: 767px) {
+  main {
+    margin: 80px 0 100px;
+  }
+  h2,
+  main p {
+    line-height: 1.8;
+  }
+  h2 {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+  }
+  main p {
+    margin-bottom: 100px;
+  }
+  .thanks_pic img {
+    width: 100%;
+    vertical-align: bottom;
+    margin: 0;
+  }
+}
+
+/*-----------トップへ戻るスクロールボタン---------*/
+
+/*スクロールリンクの形状*/
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  z-index: 2;
+  opacity: 0; /*はじめ非表示*/
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  -webkit-writing-mode: vertical-rl; /* ↓ 縦書き*/
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  white-space: nowrap; /*改行禁止*/
+  animation: arrowmove 1s ease-in-out infinite; /*矢印の動き*/
+}
+
+@keyframes arrowmove {
+  0% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+/*.scroll-viewクラスがついたら出現*/
+.scroll-top.scroll-view {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top a {
+  text-decoration: none;
+  color: #293850;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+}
+
+/*スクロールリンクの形状*/
+.js-scroll a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #293850;
+}
+
+.js-scroll a::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: -6px;
+  width: 1px;
+  height: 20px;
+  background: #293850;
+  transform: skewX(-31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x),
+.js-scroll a::before {
+  right: -11px;
+}
+
+.js-pagetop a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #666;
+}
+
+.js-pagetop a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 1px;
+  height: 20px;
+  background: #666;
+  transform: skewX(31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x),
+.js-pagetop a::before {
+  right: 0;
+}

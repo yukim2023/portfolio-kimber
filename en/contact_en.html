@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="お問い合わせフォーム  / Portfolio of Yuki Kimber">
-    <title>CONTACT｜お問い合わせフォーム / Portfolio of Yuki Kimber</title>
+    <meta name="description" content="Inquiry form / Portfolio of Yuki Kimber">
+    <title>CONTACT ME ｜ Inquiry form / Portfolio of Yuki Kimber</title>
     <link rel="stylesheet" href="./css/common_en.css">
     <link rel="stylesheet" href="./css/contact_en.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,14 +17,15 @@
 
     <header>
         <div class="header_wrap">
-            <h1 class="header_logo"><a href="#"><img src="../images/logo@2x.png" alt="logo"></a></h1>
+            <h1 class="header_logo"><a href="./index_en.html"><img src="../images/logo@2x.png" alt="logo"></a></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="./works_en.html">Service</a></li>
+                    <li><a href="./index_en.html#services">Services</a></li>
                     <li><a href="./works_en.html">Works</a></li>
-                    <li><a href="./en/about_en.html">About me</a></li>
-                    <li><a href="./en/contact_en.html">Contact</a></li>
-                    <li><a href="./en/contact_en"><img src="../images/globe.jpg" alt="英語ページへ"></a></li>
+                    <li><a href="./about_en.html">About me</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="../ja/contact.html"><img src="../images/globe_ja.png" alt="Switch to Japanese"></a>
+                    </li>
                 </ul>
             </nav>
             <div class="sp_btn">
@@ -34,12 +35,13 @@
             </div>
             <nav class="sp_nav">
                 <ul>
-                    <li><a href="./index.html#service">Service</a></li>
-                    <li><a href="../ja/works.html">Works</a></li>
-                    <li><a href="../ja/about.html">About me</a></li>
-                    <li><a href="../ja/contact.html">Contact</a></li>
-                    <li><a href="../en/contact.html"><img src="../images/globe_sp.png" alt="英語ページへ"></a></li>
-                    <li><a href="../en/contact.html"></a>English</li>
+                    <li><a href="./index_en.html#services">Servics</a></li>
+                    <li><a href="./works_en.html">Works</a></li>
+                    <li><a href="./about_en.html">About me</a></li>
+                    <li><a href="./contact_en.html#contact_form">Contact</a></li>
+                    <li><a href="../ja/contact.html"><img src="../images/globe_sp.png" alt="Switch to Japanese"></a>
+                    </li>
+                    <li><a class="small" href="../ja/contact.html">Japanese</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,8 +57,8 @@
     <form
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfYQ69VC9KQWIWx4CfFG2zAOIAih8uQI4Muzop4bDEZXgVxQw/formResponse"
         method="post" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
-        <div class="contact_form">
-            <h2><img src="../images/contact@2x.png" alt="お問い合わせフォーム"></h2>
+        <div id="contact_form">
+            <h2><img src="../images/contact@2x.png" alt="Inquiry form"></h2>
         </div>
         <main>
             <p class="info">For inquiries or requests regarding design, please contact me using the inquiry form below.
@@ -66,14 +68,15 @@
 
         <div class="c-form">
             <div class="c-form__item">
-                <label class="c-form__label" for="field-item">お問い合わせ項目<span class="c-form__required">必須</span></label>
+                <label class="c-form__label" for="field-item"><span class="c-form__required">Required</span>Inquiry
+                    about</label>
                 <div class="select-wrap">
                     <select id="select" name="entry.368708745">
-                        <option class="option__input" value="バナー作成">&nbsp;バナー作成</option>
-                        <option class="option__input" value="LP作成">LP作成</option>
-                        <option class="option__input" value="WEBページ作成">WEBページ作成</option>
-                        <option class="option__input" value="デザインのご相談">デザインのご相談</option>
-                        <option class="option__input" value="Other">Other</option>
+                        <option class="option__input" value="バナー作成">&nbsp;Banner</option>
+                        <option class="option__input" value="LP作成">Landing page</option>
+                        <option class="option__input" value="WEBページ作成">Website</option>
+                        <option class="option__input" value="デザインのご相談">Design</option>
+                        <option class="option__input" value="その他">Other</option>
                     </select>
                 </div>
             </div>
@@ -83,13 +86,13 @@
                     required="required" />
             </div>
             <div class="c-form__item">
-                <label class="c-form__label" for="field-name">Name<span class="c-form__required">Required</span></label>
+                <label class="c-form__label" for="field-name"><span class="c-form__required">Required</span>Name</label>
                 <input name="entry.1438891546" class="c-form__input" id="field_name" placeholder="" type="text"
                     required="required" />
             </div>
             <div class="c-form__item">
-                <label class="c-form__label" for="field-mail">Mail address<span
-                        class="c-form__required">Required</span></label>
+                <label class="c-form__label" for="field-mail"><span class="c-form__required">Required</span>Mail
+                    address</label>
                 <input name="entry.1116419407" class="c-form__input" id="field_mail" placeholder="sample@gmail.com"
                     type="email" required="required" />
             </div>
@@ -99,34 +102,31 @@
                     required="required" />
             </div>
             <div class="c-form__item">
-                <label class="c-form__label" for="field-message">内容<span
-                        class="c-form__required">Required</span></label>
+                <label class="c-form__label" for="field-message"><span
+                        class="c-form__required">Required</span>Message</label>
                 <textarea name="entry.216942296" class="c-form__input" id="field_message" placeholder=""></textarea>
             </div>
             <div class="c-form__item">
-                <label class="c-form__label" for="field-robot">ロボットではありませんか？<span
-                        class="c-form__required">Required</span>回答欄に表示されている言葉をそのまま入力してください。</label>
+                <label class="c-form__label" for="field-robot"><span class="c-form__required">Required</span>I'm not a
+                    Robot.<br>Please fill in the letters indicated.</label>
                 <input name="entry.322127923" class="c-form__input" id="no_robot" placeholder="Tasmanian devil"
                     type="text" required="required" pattern="Tasmanian devil" />
             </div>
             <div class="c-form__submit">
-                <button type="submit">送信する</button>
+                <button type="submit">Submit</button>
             </div>
         </div>
     </form>
 
     <footer>
-        <p>お気軽にお問い合わせ・ご相談ください。</p>
         <div class="contact_button">
-            <img src="../images/airplane@2x.png" alt="送信ボタン">
-            <p>Contact</p>
+            <a href="./contact_en.html"><img src="../images/airplane@2x.png" alt="Contact button"></a>
+            <p><a href="./contact_en.html">Contact me!</a></p>
         </div>
-        <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="インスタグラムアイコン">
+        <img class="instaglam_icon" src="../images/instaglam@2x.png" alt="Instagram app icon">
         <p class="copyright">&copy;Yuki Kimber Portfolio</p>
-        <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="トップに戻るボタン"></a></div>
+        <div class="top_arrow"><a href="#"><img src="../images/top_arrow@2x.png" alt="Return to top"></a></div>
     </footer>
-
-    <script src="../js/script.js"></script>
 
     <script type="text/javascript">
         var submitted = false;
