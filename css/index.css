@@ -135,6 +135,9 @@ main p {
 }
 
 /* ------ */
+#services {
+  scroll-margin-top: 100px; /* ズレを修正 */
+}
 #services,
 #workbook {
   padding: 0 50px;
@@ -279,8 +282,9 @@ main p {
   #services h4 {
     text-align: center;
     margin: 50px 0 30px;
-    border-left: 7px solid #a6b8c2;
     padding: 0;
+    border: none;
+    font-size: 32px;
   }
   #services p {
     padding: 0px;

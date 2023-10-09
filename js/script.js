@@ -1,10 +1,15 @@
 // ↓カーソル
 var cursor = document.getElementById("cursor");
 // カーソル用のdivタグをマウスに追従させる
-document.addEventListener("mousemove", function (e) {
-  cursor.style.transform =
-    "translate(" + e.clientX + "px, " + e.clientY + "px)";
-});
+document.addEventListener(
+  "mousemove",
+  function (e) {
+    cursor.style.transform =
+      "translate(" + e.clientX + "px, " + e.clientY + "px)";
+  },
+  { passive: true }
+);
+
 // リンクにホバーした時にクラス追加、離れたらクラス削除
 var link = document.querySelectorAll("a");
 for (var i = 0; i < link.length; i++) {
@@ -60,67 +65,32 @@ $(function () {
   // モーダル内矢印の制御
   $(".modal-next").on("click", function () {
     $(this).closest(".modal-container").removeClass("active");
-    $(this).closest(".modal-container").next().addClass("active");
+    // 次のモーダルが無ければ、htmlとbodyのstyleを削除する処理を追加
+    if ($(this).closest(".modal-container").next().length > 0) {
+      $(this).closest(".modal-container").next().addClass("active");
+    } else {
+      $("html, body").removeAttr("style");
+    }
     return false;
   });
-  $(".modal-prev").on("click", function () {
-    $(this).closest(".modal-container").removeClass("active");
+});
+
+$(".modal-prev").on("click", function () {
+  $(this).closest(".modal-container").removeClass("active");
+  // 次のモーダルが無ければ、htmlとbodyのstyleを削除する処理を追加
+  if ($(this).closest(".modal-container").prev().length > 0) {
     $(this).closest(".modal-container").prev().addClass("active");
-    return false;
-  });
+  } else {
+    $("html, body").removeAttr("style");
+  }
+  return false;
 });
 
 // ↓ ハンバーガー
 //開くボタンをクリックしたらモーダルを表示する
 $(function () {
-  $(".sp_btn").click(function () {
-    $(this).toggleClass("active");
-    $(".sp_nav").toggleClass("active");
-
-    // こちらのコードは不要
-    // if ($(this).hasClass("active")) {
-    //   $(".sp_nav").addClass("active");
-    // } else {
-    //   $(".sp_nav").removeClass("active");
-    // }
+  $(".sp_btn, .sp_nav a").click(function () {
+    $(".sp_btn").toggleClass("active"); //ハンバーガーメニュー内リンクをトリガーに追加
+    $(".sp_nav").toggleClass("active"); //thisだと同じページだった場合にバッテンが元に戻らない
   });
-});
-
-// test
-
-//スクロールした際の動きを関数でまとめる
-function PageTopCheck() {
-  var winScrollTop = $(this).scrollTop();
-  var secondTop = $("#area-2").offset().top - 150; //#area-2の上から150pxの位置まで来たら
-  if (winScrollTop >= secondTop) {
-    $(".js-scroll").removeClass("scroll-view"); //.js-scrollからscroll-viewというクラス名を除去
-    $(".js-pagetop").addClass("scroll-view"); //.js-pagetopにscroll-viewというクラス名を付与
-  } else {
-    //元に戻ったら
-    $(".js-scroll").addClass("scroll-view"); //.js-scrollからscroll-viewというクラス名を付与
-    $(".js-pagetop").removeClass("scroll-view"); //.js-pagetopからscroll-viewというクラス名を除去
-  }
-}
-
-//クリックした際の動き
-$(".scroll-top a").click(function () {
-  var elmHash = $(this).attr("href"); //hrefの内容を取得
-  if (elmHash == "#area-2") {
-    //もし、リンク先のhref の後が#area-2の場合
-    var pos = $(elmHash).offset().top;
-    $("body,html").animate({ scrollTop: pos }, pos); //#area-2にスクロール
-  } else {
-    $("body,html").animate({ scrollTop: 0 }, 500); //それ以外はトップへスクロール。数字が大きくなるほどゆっくりスクロール
-  }
-  return false; //リンク自体の無効化
-});
-
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-  PageTopCheck(); /* スクロールした際の動きの関数を呼ぶ*/
-});
-
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on("load", function () {
-  PageTopCheck(); /* スクロールした際の動きの関数を呼ぶ*/
 });

@@ -196,9 +196,6 @@ h4 {
   border: 0.5px solid #b3b3b3;
 }
 
-.modal05 img {
-  border: 0.5px solid #b3b3b3;
-}
 .modal-container::before {
   content: "";
   display: inline-block;

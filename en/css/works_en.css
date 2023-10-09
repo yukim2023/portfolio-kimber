@@ -195,9 +195,6 @@ h4 {
   width: 77%;
   border: 0.5px solid #b3b3b3;
 }
-.suare_border img {
-  border: 0.5px solid #b3b3b3;
-}
 .modal-container::before {
   content: "";
   display: inline-block;

@@ -47,7 +47,7 @@ img {
   top: 0;
   right: 0;
   z-index: 10;
-  background-color: #f7f3f1;
+  background-color: #e9f1f4;
 }
 .header_logo {
   margin-left: 30px;
@@ -256,6 +256,7 @@ footer p {
   }
 
   nav.sp_nav {
+    visibility: hidden;
     position: fixed;
     z-index: 2;
     top: 0;

@@ -38,6 +38,11 @@ h2 img {
   width: 30%;
   min-width: 120px;
 }
+#skills,
+#expertise {
+  scroll-margin-top: 120px; /* 位置のズレを修正 */
+}
+
 .my_name {
   width: 31%;
   margin-top: 50px;
